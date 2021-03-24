@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SingleMusicComponent } from './single-music/single-music.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ActuMusicComponent } from './actu-music/actu-music.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SingleMusicComponent
+    SingleMusicComponent,
+    ActuMusicComponent
   ],
   imports: [
     BrowserModule,
