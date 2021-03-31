@@ -1,0 +1,27 @@
+<div class='container'>
+    <div class='row'>
+        <div class='col-12'>
+            <h1>Une musique en tête ?</h1>
+            <p class='lead'>Recherchez toutes les musiques que vous souhaitez : Rap, Rock, Metal, Pop,et bien d'autres encore.<br>
+            Saisissez le nom de la musique, de l'artiste ou de l'album qui vous envie ...
+            </p>
+            <input class='mb-3' type="search" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" placeholder="Rechercher une musique..."/>
+        </div>
+    </div>
+
+
+<div *ngIf="searchRes">
+    <div *ngFor="let res of searchRes">
+        <div class='row'>
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li routerLink='/artist/{{res.id}}' class='list-group-item list-group-item-action d-flex mt-1 mb-1 w-100 justify-content-between align-items-center'>{{res.name}}
+                    <span class="badge badge-primary badge-pill" *ngFor="let type of res.types">{{type}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

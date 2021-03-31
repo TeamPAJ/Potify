@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-music.component.scss']
 })
 export class SingleMusicComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
