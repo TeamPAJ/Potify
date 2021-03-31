@@ -4,26 +4,43 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SingleMusicComponent } from './single-music/single-music.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-<<<<<<< HEAD
 import { ActuMusicComponent } from './actu-music/actu-music.component';
-=======
 import { Navbar } from './navbar/navbar.component';
-import { AllMusicsComponent } from './all-musics/all-musics.component'
+
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
->>>>>>> d071da35ec829c0ae96e2b938a87d1638e5686d6
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatExpansionModule } from '@angular/material/expansion';
+
+import { GlobalService } from './services/global.service';
+import { SearchComponent } from './search/search.component';
+import { Routes, RouterModule } from '@angular/router'
+import { HttpClientModule } from '@angular/common/http';
+import { ArtistComponent } from './artist/artist.component';
+import { AlbumComponent } from './album/album.component';
+
+const routes : Routes = [
+  {
+    path: 'accueil', component: ActuMusicComponent
+  },
+  {
+    path: 'search', component: SearchComponent
+  },
+  {
+    path: 'artist/:id', component: ArtistComponent
+  },
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     SingleMusicComponent,
-<<<<<<< HEAD
-    ActuMusicComponent
-=======
+    ActuMusicComponent,
     Navbar,
-    AllMusicsComponent
->>>>>>> d071da35ec829c0ae96e2b938a87d1638e5686d6
+    SearchComponent,
+    ArtistComponent,
+    AlbumComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +49,17 @@ import { MatSliderModule } from '@angular/material/slider';
     MatInputModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatSliderModule
+    MatSliderModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatExpansionModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    GlobalService
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

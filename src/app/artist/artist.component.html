@@ -1,0 +1,23 @@
+<div *ngIf="artist">
+    <div class='container'>
+        <div class='row'>
+            <div class="col-md-6 col-12">
+            <div class='card bg-dark text-white mb-3 mt-3'>
+                <img class='card-img-top' src="{{artist.images[0].url}}"/>
+                <div class='card-body'>
+                    <p id='artistName' class='text-align-center'>{{artist.name}}</p>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4 col-12 h">
+                <div *ngFor="let album of albums">
+                    <div class='card bg-dark text-white mb-3 mt-3'>
+                        <img class='card-img-top' src="{{album.images[0].url}}"/>
+                        <div class='card-body'>
+                        <p id='artistName' class='text-align-center'>{{album.name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

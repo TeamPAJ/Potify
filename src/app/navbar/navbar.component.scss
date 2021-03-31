@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* assumes you only want one row */
+  }
+*{
+    font-family: 'Paytone One', sans-serif;
+}
