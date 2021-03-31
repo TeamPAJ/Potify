@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewreleasesService } from '../services/newreleases.service';
 
 
 @Component({
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllMusicsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: NewreleasesService) { }
 
   ngOnInit(): void {
+this.service.getNewRealases().
+subscribe(data =>{
+  console.log(data);
+});
   }
-
 }

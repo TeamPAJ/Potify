@@ -1,3 +1,27 @@
 
-<p>Les suggestions spécialement faites pour vous</p>
-<p>actu-music works!</p>
+<h1 class="nouveau">Dernières sorties</h1>
+
+<div class="card-container">
+    
+<mat-card
+class="container"
+    *ngFor= "let info of InfoSons">
+    <img class="card-img-top" [src]="info.images[0].url" alt="Card image cap">
+    <h1 class="titre"
+    >{{info.name}}</h1>  
+    
+    <mat-card-content
+    class="artistes"
+    
+    *ngFor="let artistes of info.artists">
+            {{artistes.name}}
+
+    
+    </mat-card-content>
+    <a class="btn btn-light" href="{{info.external_urls.spotify}}">Voir </a>
+</mat-card>
+</div>
+
+
+
+
