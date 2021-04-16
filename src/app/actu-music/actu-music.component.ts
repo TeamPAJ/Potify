@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewreleasesService } from '../services/newreleases.service';
-
+import { GlobalService } from '../services/global.service';
 
 
 @Component({

@@ -10,11 +10,8 @@ import { Navbar } from './navbar/navbar.component';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-<<<<<<< HEAD
-import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 
-=======
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 
@@ -36,7 +33,6 @@ const routes : Routes = [
     path: 'artist/:id', component: ArtistComponent
   },
 ];
->>>>>>> 46418e1f111aabeef60f3b1d617ee8a1a0bdd409
 
 @NgModule({
   declarations: [
@@ -44,13 +40,9 @@ const routes : Routes = [
     SingleMusicComponent,
     ActuMusicComponent,
     Navbar,
-<<<<<<< HEAD
-    AllMusicsComponent
-=======
     SearchComponent,
     ArtistComponent,
     AlbumComponent,
->>>>>>> 46418e1f111aabeef60f3b1d617ee8a1a0bdd409
   ],
   imports: [
     HttpClientModule,
@@ -61,19 +53,15 @@ const routes : Routes = [
     BrowserAnimationsModule,
     MatInputModule,
     MatSliderModule,
-<<<<<<< HEAD
-    MatCardModule,
-    
-=======
     ReactiveFormsModule,
     FormsModule,
     MatExpansionModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [
     GlobalService
->>>>>>> 46418e1f111aabeef60f3b1d617ee8a1a0bdd409
   ],
   bootstrap: [AppComponent]
 })
