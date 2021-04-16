@@ -13,7 +13,7 @@ export class GlobalService {
   }
 
   public getQuery(query: string) {
-    let token:string = "BQB-c-i3PVF4CWPBlpgvNAHaA1Xns6PIAp40Wt330HHe8dYhyBeKpk2MjvL5DI04mk4-Hh7X7-DquJuf4Ch0mga6N6KxNSHdil1lo2mpi_75RZGe3Sf2oNJLOKVJIj_c_WJmy4E6M55mnKzimDPDcLLun9XBLiuueNhX8Hy8bQxkJ8UTlAIzXN3-8dvKXKW4qW92b8qiE541KO0aVSrDRpZ7ggWDR52NrfT667vNbp7Bjyvf6Ce1sHa2x0OwuF5V6qbcqSxxBbKKQzeJXZTxMmXcz36AI0vaugcwa6mQbC2v";
+    let token:string = "VOTRE TOKEN";
     const url: string = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + token,
